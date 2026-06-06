@@ -54,7 +54,7 @@ public class PriceCalculator {
         switch (color) {
             case 1:
             case 2:
-                result = 2.0; // BLACK, WHITE (Effet cascade / Fall-through)
+                result = 2.0; // BLACK, WHITE , ORANGE
                 break;
             case 3:
             case 4:
