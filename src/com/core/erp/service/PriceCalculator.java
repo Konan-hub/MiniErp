@@ -3,69 +3,37 @@ package com.core.erp.service;
 public class PriceCalculator {
 
     public double calculateBasePrice(int type) {
-        double result = 0.0;
+        double result ;
         switch (type) {
-            case 1:
-                result = 15.0;  // TSHIRT
-                break;
-            case 2:
-                result = 40.0;  // JEANS
-                break;
-            case 3:
-                result = 8.0;   // UNDERWEAR
-                break;
-            case 4:
-                result = 50.0;  // HOODIE
-                break;
-            case 5:
-                result = 80.0;  // JACKET
-                break;
-            default:
-                result = 15.0;  // Default TSHIRT
-                break;
+            case 1 -> result = 15.0;  // TSHIRT
+            case 2 -> result = 40.0;  // JEANS
+            case 3 -> result = 8.0;   // UNDERWEAR
+            case 4 -> result = 50.0;  // HOODIE
+            case 5 -> result = 80.0;  // JACKET
+            default -> result = 15.0;  // Default TSHIRT
         }
         return result;
     }
 
     public double calculateSizeSurcharge(int size) {
-        double result = 0.0;
+        double result;
         switch (size) {
-            case 3:
-                result = 1.0;  // M
-                break;
-            case 4:
-                result = 3.0;  // L
-                break;
-            case 5:
-                result = 5.0;  // XL
-                break;
-            case 6:
-                result = 7.0;  // XXL
-                break;
-            default:
-                result = 0.0;  // XS, S ou invalide
-                break;
+            case 3 -> result = 1.0;  // M
+            case 4 -> result = 3.0;  // L
+            case 5 -> result = 5.0;  // XL
+            case 6 -> result = 7.0;  // XXL
+            default -> result = 0.0;  // XS, S ou invalide
         }
         return result;
     }
 
     public double calculateColorSurcharge(int color) {
-        double result = 0.0;
+        double result ;
         switch (color) {
-            case 1:
-            case 2:
-                result = 2.0; // BLACK, WHITE , ORANGE
-                break;
-            case 3:
-            case 4:
-                result = 1.0; // BLUE, RED
-                break;
-            case 5:
-                result = 5.0; // SPECIAL
-                break;
-            default:
-                result = 0.0;
-                break;
+            case 1, 2 -> result = 2.0; // BLACK, WHITE , ORANGE
+            case 3, 4 -> result = 1.0; // BLUE, RED
+            case 5 -> result = 5.0; // SPECIAL
+            default -> result = 0.0;
         }
         return result;
     }
